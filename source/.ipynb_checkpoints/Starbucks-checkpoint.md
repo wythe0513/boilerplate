@@ -1,7 +1,5 @@
-# Sturbacks
-
 ## Introduction
-As a part of the couse of [Udacity](https://www.udacity.com/), Data Science Nanodegree, I work on data sets which is kindly given by [Starbucks](https://www.starbucks.com/) for the purpose of this course. This page is a summary of my findingns, if interested, code is [here](https://github.com/wythe0513/Starbucks).
+As a part of the couse of [Udacity](https://www.udacity.com/), Data Science Nanodegree, I take on data sets which is kindly given by [Starbucks](https://www.starbucks.com/) for the purpose of this course.
 
 Data sets are based on a test marketing where 10 deffrent types of offers were presented to total 17,000 customers. They were made in 6 batches in around 6 weeks, almost once per week. In each bach, 10 different offers were given to around 15000 customers randomly through 4 different channels (e-mail, social networks, web and mobile ). It varies on customers how many and what kind of offers they received durign this test period.
 
