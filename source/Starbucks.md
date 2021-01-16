@@ -89,17 +89,28 @@ Group of transaction defference of gender is not so big, while non transaction g
 
 #### 1.3 comparison among transaction customers
 
-
-
 **Fig 6:**  Numbers of transactions and amount spent 
 ![Fig.6](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/transaction_amount.png)
 Generally speaking, numbers of transaction between male and female are similer and younger generatio transacted more than elder generation, while for an average amount spent, female are much higher given the numbers of female customers(smaller than male).
 
 **Fig 7:**  Numbers of transactions and amount spent 
-![Fig.6](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/completion_ratio.png)
+![Fig.7](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/completion_ratio.png)
 
 **Fig 8:**  Numbers of transactions and amount spent 
-![Fig.6](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/spent_.png)
+![Fig.8](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/spent_income.png)
+
+#### 1.4 comparison among view not view
+
+**Fig 9:**  Offer completion on offer type
+
+This figure is a comparison between the offer type given(left hand side below) and completed offers on offer type(right hand side below). The completed offers are counted only oned after offer viewed. That means completed without careing offers are expluded. It seems to me that the discount offers are a bit attractive than BOGO(Buy One Get One) because completion to discout offers are a bit bigger than originally distributed offers particulary for females in elder generation. But, the differeces are subtle, and it is aanything more than that through this heuristic analysis. I try to explore this by the later machine lerning part if the offer type may impact on customers activities.
+![Fig.9](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/offer_complete.png)
+
+**Fig 10:**  comparison among genders of offer view or not
+
+It looks to me that no diffrences found among genders if they view offers or not.
+![Fig.10](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/offer_view.png)
+
 
 ### Summary of huristic approach
 
