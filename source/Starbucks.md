@@ -58,12 +58,30 @@ available. Without personal data, it is meaningless to carry on exploration, the
 
 #### Heuristic approach
 
-Following fig, is a distribution of the population of customers of this group.
-![Fig.1](https://raw.githubusercontent.com/wythe0513/boilerplate/master/amout_age_gender_px.html)
+1. Comparison between customers who made at leaste 1 transaction("transaction") and customers without any transaction("No transaction")
 
-![Fig.2](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/download.png)
+> Among 14,825 customers(17,000 except '118 years old', transaction customers are 11,986 and non transaction customers are 2,839
 
-![Fig.2](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/availability.png)
+> **Fig 1:**  A comparison of those groups of average incomes
+>![Fig.1](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/download.png)
+> Group of transaction is ginificantly higher than non transaction group.
+
+> **Fig 2:**  A comparison of those groups of average loyalty
+>![Fig.2](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/loyalty.png)
+> Group of transaction is ginificantly higher than non transaction group.
+
+> **Fig 3:**  A comparison of those groups of average age
+>![Fig.3](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/age.png)
+> The average age of those tow group are not different.
+
+> **Fig 4:**  A comparison of genders
+>![Fig.4](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/gender.png)
+> Group of transaction defference of gender is not so big, while non transaction group numbers of male is much larger than femail.
+> **Fig 4:**  A comparison of genders
+>![Fig.4](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/gender.png)
+> Group of transaction defference of gender is not so big, while non transaction group numbers of male is much larger than femail.
+
+
 
 The general trend is as follows.
 
