@@ -36,8 +36,8 @@ Data sets is a summary of the outcome of this test. It makes up of following 3 f
 
 The purpose of my exploration on those data is as follow;
 
-1. To try to understand the customers and answer the question, what is a features of customers(age, income, gender) who spend or not spend on Starbucks pruductsl. 
-2. To try too find answers to the question, what kind of features of customers who view offers if yes, which channels work more effectively to communicate with
+1. To try to understand the customers and answer the question, what is a features of customers(age, income, gender) who spend or not spend on Starbucks pruducts. 
+2. To try to find answers to the question, what kind of features of customers who view offers if yes, which channels work more effectively to communicate with
 customers?
 3. To try to find answers to the question, did offers are attractive enough to make them action if yes what offers are effective to what customers group?
 
@@ -47,7 +47,7 @@ In order to find answers of those questins, I made heuristice analysis through a
 
 Before exploration, following data cleaning and processing were made.
 
-- Among 17000 customers, ages of 2885 customers are categolized as ‘118 years old’ and have no personal data
+- Among 17000 customers, ages 2885 customers are categolized as ‘118 years old’ and have no personal data
 available. Without personal data, it is meaningless to carry on exploration, therefore, I drop those customers from this exploration.
 - create 'loyalty' columns in `profile` dataframe that is a period since they become a member of Starbucks and may be considered one of the indication of a level of their loylaity to Stabusks.
 - create dataframe `transaction`(customers at least made one transaction during test period) and `non_transaction`(no transaction during period). In this dataframe, personal data(age, income, gender, loyalty) and transaction data(numbers of offer received, completed and transaction) are around.
@@ -60,14 +60,14 @@ available. Without personal data, it is meaningless to carry on exploration, the
 
 #### 1.1 Customers population distribution
 
-Fig.1 shows a distribution of customers on age and gender. Total population is **14,825** customers(17,000 cusmtomers except '118 years old'). The numbers of male is larger than femail and most populated generations are between 50 to 70.
+Fig.1 shows a distribution of customers on age and gender. Total population is **14,825** customers(17,000 cusmtomers except '118 years old'). The numbers of male is larger than female and most populated generations are between 50s to 60s.
 
 **Fig 1:**  Population of customers
 ![Fig](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/population.png)
 
 
 
-#### 1.2 Comparison of transacted customes and non transacted customers
+#### 1.2 Comparison of transacted customers and non transacted customers
 
 Comparisons were made between customers who made at leaste 1 transaction("transaction") and customers without any transaction("No transaction"). Among **14,825** customers, transaction customers are **11,986** and non transaction customers are **2,839**.
 
@@ -103,7 +103,7 @@ Generally speaking, numbers of transaction between male and female are similer a
 
 **Fig 9:**  Offer completion on offer type
 
-This figure is a comparison between the offer type given(left hand side below) and completed offers on offer type(right hand side below). The completed offers are counted only oned after offer viewed. That means completed without careing offers are expluded. It seems to me that the discount offers are a bit attractive than BOGO(Buy One Get One) because completion to discout offers are a bit bigger than originally distributed offers particulary for females in elder generation. But, the differeces are subtle, and it is hard to say anything decisive through the heuristic analysis. I try to explore this by machine lernings later part if the offer type may impact on customers activities.
+This figure is a comparison between the offer types originally given by Strbucks(left hand side table below) and completed offers on offer type(right hand side below). The completed offers include only ones that are made after offer viewed. That means that completed but do not view offers are excluded. It seems to me that the discount offers are a bit attractive to customers than BOGO(Buy One Get One) because completion to discout offers are a bit higher than originally distributed offers particulary for females in elder generation. having said that, the differeces are very subtle, and it is hard to say anything decisive through the heuristic analysis. I try to explore this by machine lernings later part if the offer type may impact on customers activities.
 ![Fig.9](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/offer_complete.png)
 
 **Fig 10:**  comparison among genders of offer view or not
@@ -114,15 +114,16 @@ It looks to me that no diffrences found among genders if they view offers or not
 
 #### Summary of huristic approach
 
-- Population of Male is bigger than Female in most ages.
+- Customers population of Male is bigger than Female in most ages.
 - Plots shows that the shape of customer population distribution looks like a normal distribution. More populated ages are 40-60 and youngers are less. And also, male are more populated than female. It is a bit strange for me. In Japan, where I live, a situation is contrary vice versa, Starbucks is popular for younger and female.
 - Income level for female is larger than male generally
 - Trend of population between female and male are close.
 - Average mounts spent for female is more than male in most of ages, while population of male is bigger than female. At the same time, numbers of offer complete hence reward gained for female are larger than male.
 - As a particular trend, a group of elder generation of male spend significantly larger amount that are away from a general trend. They are maybe a very loyal customers group.
-- As a result, it is efficient to send offers to female of 30 to 50 ages with high income.
+- Offer types may not make big impact on their activity althoug it is difficult to say about this from this analysis
+- As a result, it is fair to say that a favorable target of offers efficient to send offers to female of 30 to 50 ages with high income.
 
-#### 2. Machine Learning analysis
+### 2. Machine Learning analysis
 I made three machine learning analysis made on 2 groups,
 Group that views offers
 Group 1: offer completed after offer viewed
