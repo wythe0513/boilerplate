@@ -56,19 +56,18 @@ available. Without personal data, it is meaningless to carry on exploration, the
 
 ## Exploration
 
-#### 1. Heuristic approach
+### 1. Heuristic approach
 
-##### 1.1 Customers population distribution
+#### 1.1 Customers population distribution
 
 Fig.1 shows a distribution of customers on age and gender. Total population is **14,825** customers(17,000 cusmtomers except '118 years old'). The numbers of male is larger than femail and most populated generations are between 50 to 70.
 
-
 **Fig 1:**  Population of customers
 ![Fig](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/population.png)
-Group of transaction is ginificantly higher than non transaction group.
 
 
-##### 1.2 Comparison of transacted customes and non transacted customers
+
+#### 1.2 Comparison of transacted customes and non transacted customers
 
 Comparisons were made between customers who made at leaste 1 transaction("transaction") and customers without any transaction("No transaction"). Among **14,825** customers, transaction customers are **11,986** and non transaction customers are **2,839**.
 
@@ -88,7 +87,8 @@ The average age of those tow group are not different.
 ![Fig.4](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/gender.png)
 Group of transaction defference of gender is not so big, while non transaction group numbers of male is much larger than femail.
 
-##### 1.3 comparison among transaction customers
+#### 1.3 comparison among transaction customers
+
 
 
 **Fig 6:**  Numbers of transactions and amount spent 
@@ -96,7 +96,7 @@ Group of transaction defference of gender is not so big, while non transaction g
 Generally speaking, numbers of transaction between male and female are similer and younger generatio transacted more than elder generation, while for an average amount spent, female are much higher given the numbers of female customers(smaller than male).
 
 
-#### Summary of huristic approach
+### Summary of huristic approach
 
 - Population of Male is bigger than Female in most ages.
 - Plots shows that the shape of customer population distribution looks like a normal distribution. More populated ages are 40-60 and youngers are less. And also, male are more populated than female. It is a bit strange for me. In Japan, where I live, a situation is contrary vice versa, Starbucks is popular for younger and female.
