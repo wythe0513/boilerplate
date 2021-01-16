@@ -60,6 +60,7 @@ available. Without personal data, it is meaningless to carry on exploration, the
 
 Following fig, is a distribution of the population of customers of this group.
 ![Fig.1](https://github.com/wythe0513/Starbucks/blob/master/amout_age_gender_px.html)
+![Fig.2](https://github.com/wythe0513/boilerplate/blob/master/source/download.png)
 
 The general trend is as follows.
 
