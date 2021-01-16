@@ -103,7 +103,7 @@ Generally speaking, numbers of transaction between male and female are similer a
 
 **Fig 9:**  Offer completion on offer type
 
-This figure is a comparison between the offer type given(left hand side below) and completed offers on offer type(right hand side below). The completed offers are counted only oned after offer viewed. That means completed without careing offers are expluded. It seems to me that the discount offers are a bit attractive than BOGO(Buy One Get One) because completion to discout offers are a bit bigger than originally distributed offers particulary for females in elder generation. But, the differeces are subtle, and it is aanything more than that through this heuristic analysis. I try to explore this by the later machine lerning part if the offer type may impact on customers activities.
+This figure is a comparison between the offer type given(left hand side below) and completed offers on offer type(right hand side below). The completed offers are counted only oned after offer viewed. That means completed without careing offers are expluded. It seems to me that the discount offers are a bit attractive than BOGO(Buy One Get One) because completion to discout offers are a bit bigger than originally distributed offers particulary for females in elder generation. But, the differeces are subtle, and it is hard to say anything decisive through the heuristic analysis. I try to explore this by machine lernings later part if the offer type may impact on customers activities.
 ![Fig.9](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/offer_complete.png)
 
 **Fig 10:**  comparison among genders of offer view or not
@@ -112,7 +112,7 @@ It looks to me that no diffrences found among genders if they view offers or not
 ![Fig.10](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/offer_view.png)
 
 
-### Summary of huristic approach
+#### Summary of huristic approach
 
 - Population of Male is bigger than Female in most ages.
 - Plots shows that the shape of customer population distribution looks like a normal distribution. More populated ages are 40-60 and youngers are less. And also, male are more populated than female. It is a bit strange for me. In Japan, where I live, a situation is contrary vice versa, Starbucks is popular for younger and female.
