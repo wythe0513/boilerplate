@@ -95,6 +95,11 @@ Group of transaction defference of gender is not so big, while non transaction g
 ![Fig.6](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/transaction_amount.png)
 Generally speaking, numbers of transaction between male and female are similer and younger generatio transacted more than elder generation, while for an average amount spent, female are much higher given the numbers of female customers(smaller than male).
 
+**Fig 7:**  Numbers of transactions and amount spent 
+![Fig.6](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/completion_ratio.png)
+
+**Fig 8:**  Numbers of transactions and amount spent 
+![Fig.6](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/spent_.png)
 
 ### Summary of huristic approach
 
@@ -139,4 +144,3 @@ customers and particularly, ages of 30 – 50 generation are generally high-inco
 clusters are most likely responded to offers especially discount rather than BOGO.
 Those may be a target of commercial activities.
 
-## Acknoledgements
