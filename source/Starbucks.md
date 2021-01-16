@@ -59,8 +59,10 @@ available. Without personal data, it is meaningless to carry on exploration, the
 #### Heuristic approach
 
 Following fig, is a distribution of the population of customers of this group.
-![Fig.1](https://raw.githubusercontent.com/wythe0513/Starbucks/blob/master/amout_age_gender_px.html)
-![Fig.2](https://raw.githubusercontent.com/wythe0513/boilerplate/blob/master/source/download.png)
+![Fig.1](https://raw.githubusercontent.com/wythe0513/boilerplate/master/amout_age_gender_px.html)
+
+![Fig.2](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/download.png)
+
 ![Fig.2](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/availability.png)
 
 The general trend is as follows.
