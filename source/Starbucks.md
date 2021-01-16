@@ -54,36 +54,49 @@ available. Without personal data, it is meaningless to carry on exploration, the
 - crate dataframe 'group_1' which is a groups of customers who are ment to be influenced by the contes of offers made by Starbucks. Before they complete offers(clear the condition to get rewards), those costomes view the contents of offers. This datase was used to konw kind of feartures of customers to well respond to Starbucks's marketing approach.
 - crate dataframe 'customers_notview' which is a group of customers who viewed or not viewd the offers. This datafmae was used to know which channels of communication(web, e-mail, sns and mobile) worked for them to view offers.
 
-## Exploration and Findings
+## Exploration
 
-#### Heuristic approach
+#### 1. Heuristic approach
 
-1. Comparison between customers who made at leaste 1 transaction("transaction") and customers without any transaction("No transaction")
+##### 1.1 Customers population distribution
 
-> Among 14,825 customers(17,000 except '118 years old', transaction customers are 11,986 and non transaction customers are 2,839
-
-> **Fig 1:**  A comparison of those groups of average incomes
->![Fig.1](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/download.png)
-> Group of transaction is ginificantly higher than non transaction group.
-
-> **Fig 2:**  A comparison of those groups of average loyalty
->![Fig.2](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/loyalty.png)
-> Group of transaction is ginificantly higher than non transaction group.
-
-> **Fig 3:**  A comparison of those groups of average age
->![Fig.3](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/age.png)
-> The average age of those tow group are not different.
-
-> **Fig 4:**  A comparison of genders
->![Fig.4](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/gender.png)
-> Group of transaction defference of gender is not so big, while non transaction group numbers of male is much larger than femail.
-> **Fig 4:**  A comparison of genders
->![Fig.4](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/gender.png)
-> Group of transaction defference of gender is not so big, while non transaction group numbers of male is much larger than femail.
+Fig.1 shows a distribution of customers on age and gender. Total population is **14,825** customers(17,000 cusmtomers except '118 years old'). The numbers of male is larger than femail and most populated generations are between 50 to 70.
 
 
+**Fig 1:**  Population of customers
+![Fig](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/population.png)
+Group of transaction is ginificantly higher than non transaction group.
 
-The general trend is as follows.
+
+##### 1.2 Comparison of transacted customes and non transacted customers
+
+Comparisons were made between customers who made at leaste 1 transaction("transaction") and customers without any transaction("No transaction"). Among **14,825** customers, transaction customers are **11,986** and non transaction customers are **2,839**.
+
+**Fig 2:**  A comparison of average incomes
+![Fig.1](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/download.png)
+The average income of transaction group is significantly higher than non transaction group.
+
+**Fig 3:**  A comparison average loyalty
+![Fig.2](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/loyalty.png)
+The loyalty of transaction is significantly higher than non transaction group.
+
+**Fig 4:**  A comparison of average age
+![Fig.3](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/age.png)
+The average age of those tow group are not different.
+
+**Fig 5:**  A comparison of numbers on genders
+![Fig.4](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/gender.png)
+Group of transaction defference of gender is not so big, while non transaction group numbers of male is much larger than femail.
+
+##### 1.3 comparison among transaction customers
+
+
+**Fig 6:**  Numbers of transactions and amount spent 
+![Fig.6](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/transaction_amount.png)
+Generally speaking, numbers of transaction between male and female are similer and younger generatio transacted more than elder generation, while for an average amount spent, female are much higher given the numbers of female customers(smaller than male).
+
+
+#### Summary of huristic approach
 
 - Population of Male is bigger than Female in most ages.
 - Plots shows that the shape of customer population distribution looks like a normal distribution. More populated ages are 40-60 and youngers are less. And also, male are more populated than female. It is a bit strange for me. In Japan, where I live, a situation is contrary vice versa, Starbucks is popular for younger and female.
@@ -93,7 +106,7 @@ The general trend is as follows.
 - As a particular trend, a group of elder generation of male spend significantly larger amount that are away from a general trend. They are maybe a very loyal customers group.
 - As a result, it is efficient to send offers to female of 30 to 50 ages with high income.
 
-#### Machine Learning analysis
+#### 2. Machine Learning analysis
 I made three machine learning analysis made on 2 groups,
 Group that views offers
 Group 1: offer completed after offer viewed
