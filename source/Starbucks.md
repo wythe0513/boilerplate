@@ -161,14 +161,16 @@ The result shows that the channels with customers are less important for custome
 
 On the data that contain two groups with the amount spent above 120 or less, supervised lerning by logistic regression is made. Approaces are same as the above 2.2 besides(process 4 and 5).
 
-The outcome showed similar to ones of with or without offered viewed.**Fig.11 Feature Importance
+The outcome showed similar to ones of with or without offered viewed.
+
+**Fig.11 Feature Importance
 ![Fig.14](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/logistic_regression.png)
 
 #### 2.4 Summary 
 - The results of PCA and spervised learning are reasonablly agree that level of income, age, loyalty are main features of their activities of transaction and comunication chaneels and contents of offers do not make significant impact on their action.
 - Those result also agree with heuristic analysis.
 
-### Results
+## Results and Recommendations
 1. Important features of their reactions are periods of length membership, level of income
 and age. All three features are almost 90% of features.
 2. Kinds of offers are less important for their action. They seem not to decide whether to
