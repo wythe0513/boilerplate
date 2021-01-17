@@ -74,7 +74,7 @@ Fig.1 shows a distribution of customers on age and gender. Total population is *
 Comparisons were made between customers who made at least 1 transaction("transaction") and customers without any transaction("No transaction"). Among **14,825** customers, transaction customers are **11,986** and non transaction customers are **2,839**.
 
 **Fig 2:**  A comparison of average incomes
-![Fig.1](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/download.png)
+![Fig.1](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/download_1.png)
 The average income of the transaction group is significantly higher than the non-transaction group.
 
 **Fig 3:**  A comparison average loyalty
@@ -138,7 +138,7 @@ PCA, by sklearn, was made on group_1 customers to know what are the main feature
 
 Results are shown in the following figures. They say that the  important aspects of this group are age, income and loyalty that explain almost half of the features of all components. The genders only explain 10% and type of offers  only 4% of them.
 
-**Fig.11 Results of PCA
+**Fig.11** Results of PCA
 ![Fig.11](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/pca.png)
 
 #### 2.2 Supervised Learning
@@ -152,10 +152,10 @@ On the dataset, ‘group_notview’(customers with offers viewed or not viewed),
 
 The result shows that the channels with customers are less important for customers to view offers.Rather, important features are loyalty that explains about 40% of all features followed by income and age.
 
-**Fig.11 Results of PCA
+**Fig.12** 
 ![Fig.12](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/view_notview.png)
 
-**Fig.12 Results of PCA
+**Fig.13** 
 ![Fig.13](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/view_notview_weight.png)
 
 
@@ -165,7 +165,7 @@ On the Data Frame, ‘customers_lreg’, supervised learning analysis  by logist
 
 The outcome showed similar to ones of with or without offered views.
 
-**Fig.11 Feature Importance
+**Fig.14** Feature Importance
 ![Fig.14](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/logistic_regression.png)
 
 #### 2.4 Summary 
