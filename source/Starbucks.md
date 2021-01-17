@@ -112,7 +112,7 @@ It looks to me that no diffrences found among genders if they view offers or not
 ![Fig.10](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/offer_view.png)
 
 
-#### Summary of huristic approach
+#### 1.5 Summary of huristic approach
 
 - Customers population of Male is bigger than Female in most ages.
 - Plots shows that the shape of customer population distribution looks like a normal distribution. More populated ages are 40-60 and youngers are less. And also, male are more populated than female. It is a bit strange for me. In Japan, where I live, a situation is contrary vice versa, Starbucks is popular for younger and female.
@@ -121,28 +121,54 @@ It looks to me that no diffrences found among genders if they view offers or not
 - Average mounts spent for female is more than male in most of ages, while population of male is bigger than female. At the same time, numbers of offer complete hence reward gained for female are larger than male.
 - As a particular trend, a group of elder generation of male spend significantly larger amount that are away from a general trend. They are maybe a very loyal customers group.
 - Offer types may not make big impact on their activity althoug it is difficult to say about this from this analysis
-- As a result, it is fair to say that a favorable target of offers efficient to send offers to female of 30 to 50 ages with high income.
+- As a result, it is fair to say that a more favorable target with higher possibility to respond to offers are female of 30 to 50 ages with higher income.
 
-### 2. Machine Learning analysis
-I made three machine learning analysis made on 2 groups,
+### 2. Machine Learning approach
+
+Three machine learning analysis were made on 2 groups,
 Group that views offers
 Group 1: offer completed after offer viewed
 Group 2: offer completed before offer viewed
 Group
- Principal Component Analysis by skid-learn on Group 1;
-To identify what are the principal component for this group
- Logistic analysis by classifiers (logistic regression, ad boost and support vector
-machine) on Group.
-To train classifiers and test the result of the trains by a following process;
+#### 2.1 Principal Component Analysis)PCA
+
+PCA, by skelern, was made on Group 1 customers to know what are the main features of this group of customers who completed offers after offfer viewed.
+
+Results showed important aspects of this group are age, income and loyalty that explain almost half of this groups. Genders only explain 10% and female is positively related to this group. Offers are only 4%. 
+
+**Fig.11 Results of PCA
+![Fig.11](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/pca.png)
+
+#### 2.2 Supervised Learning
+On the dataset, customers with or without offer viewed, Supervised learning was made by three classifiers of sklearn, Logistic Regression, SVC and AdaBoost based on the following process.
+
 1. Prepare data
 2. Data standardized
-
 3. Train test split
 4. Grid search to identify best classifier
 5. Final test
- Logistic analysis by random forest
-Same approach made besides 4 and 5
-The above different approaches showed reasonably similar outcome as follows.
+
+The result shows that the channels with customers are less important for customers to view offers.Rather, important features are loyallty that explains about 40% of all features followed by income and age.
+
+**Fig.11 Results of PCA
+![Fig.12](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/view_notview.png)
+
+**Fig.12 Results of PCA
+![Fig.13](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/view_notview_weight.png)
+
+
+#### 2.3 Logistic Regression Analysys
+
+On the data that contain two groups with the amount spent above 120 or less, supervised lerning by logistic regression is made. Approaces are same as the above 2.2 besides(process 4 and 5).
+
+The outcome showed similar to ones of with or without offered viewed.**Fig.11 Feature Importance
+![Fig.14](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/logistic_regression.png)
+
+#### 2.4 Summary 
+- The results of PCA and spervised learning are reasonablly agree that level of income, age, loyalty are main features of their activities of transaction and comunication chaneels and contents of offers do not make significant impact on their action.
+- Those result also agree with heuristic analysis.
+
+### Results
 1. Important features of their reactions are periods of length membership, level of income
 and age. All three features are almost 90% of features.
 2. Kinds of offers are less important for their action. They seem not to decide whether to
