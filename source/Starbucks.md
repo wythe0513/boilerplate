@@ -116,7 +116,7 @@ It looks to me that no differences are found among genders if they view offers o
 **Fig 11:**  comparison among genders of offer view or not
 
 It looks to me that no differences are found among genders if they view offers or not.
-![Fig.11](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/offer_less_interest.png)
+![Fig.11](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/offers_less_interest.png)
 
 
 
@@ -146,7 +146,7 @@ PCA, by sklearn, was made on group_1 customers to know what are the main feature
 Results are shown in the following figures. They say that the  important aspects of this group are age, income and loyalty that explain almost half of the features of all components. The genders only explain 10% and type of offers  only 4% of them.
 
 **Fig.12** Results of PCA
-![Fig.11](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/pca.png)
+![Fig.12](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/pca.png)
 
 #### 2.2 Supervised Learning
 On the dataset, ‘group_notview’(customers with offers viewed or not viewed), supervised learning analysis was made by three classifiers of sklearn, Logistic Regression, SVC and AdaBoost based on the following process.
@@ -159,11 +159,11 @@ On the dataset, ‘group_notview’(customers with offers viewed or not viewed),
 
 The result shows that the channels with customers are less important for customers to view offers.Rather, important features are loyalty that explains about 40% of all features followed by income and age.
 
-**Fig.12** 
-![Fig.12](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/view_notview.png)
-
 **Fig.13** 
-![Fig.13](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/view_notview_weight.png)
+![Fig.13](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/view_notview.png)
+
+**Fig.14** 
+![Fig.14](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/view_notview_weight.png)
 
 
 #### 2.3 Logistic Regression Analysis
@@ -172,8 +172,8 @@ On the Data Frame, ‘customers_lreg’, supervised learning analysis  by logist
 
 The outcome showed similar to ones of with or without offered views.
 
-**Fig.14** Feature Importance
-![Fig.14](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/logistic_regression.png)
+**Fig.15** Feature Importance
+![Fig.15](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/logistic_regression.png)
 
 #### 2.4 Summary 
 - The results of PCA and supervised learning are reasonably agreed that level of income, age, loyalty are main features of their activities of transaction and communication channels and contents of offers do not make a significant impact on their action.
