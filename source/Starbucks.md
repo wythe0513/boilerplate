@@ -113,6 +113,12 @@ This figure is a comparison between the offer types originally given by Strbucks
 It looks to me that no differences are found among genders if they view offers or not.
 ![Fig.10](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/offer_view.png)
 
+**Fig 11:**  comparison among genders of offer view or not
+
+It looks to me that no differences are found among genders if they view offers or not.
+![Fig.11](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/offer_less_interest.png)
+
+
 
 #### 1.5 Summary
 
@@ -120,9 +126,10 @@ It looks to me that no differences are found among genders if they view offers o
 - Those series of figures show that the shape of customer population distribution looks like a normal distribution. More populated ages are 40-60 and younger people are less. Also, male are more populated than females. Very personal impression, It is a bit strange for me. In Japan, where I live, the situation is the opposite, Starbucks is popular for younger(students) and female people. It is not so popular for 50s man to have a cafe in Starbucks.
 - The average income level for females is larger than male generally.
 - The distribution trend of the customer population between female and male are close.
-- The average amount spent for females is more than male in most ages, while the population of male is bigger than female. At the same time, numbers of offer complete hence reward gained for female are larger than male.
+- The average amount spent for females is more than male in most ages, while the population of male is bigger than female. At the same time, numbers of offers  completed hence reward gained for females are larger than male.
 - As a particular trend, a group of the older generation(90s) of male spend significantly larger amounts that is deviated from a general trend. They are maybe very loyal customers.
 - Offers of any kind may not make a big impact on their action to buy although it is difficult to say about this from those data.
+- The customers with less interest in offers(less than 40% of offers completed to the offer received((lower 25% boundary of total customers who made transaction))  has a particular feature that is the significant larger number of male compare to that of total customers. 
 - In summary, it is fair to say that a more favorable target with higher possibility to respond to offers are females of 30s to 50s ages with higher incomes. 
 
 ### 2. Machine Learning approach
@@ -138,7 +145,7 @@ PCA, by sklearn, was made on group_1 customers to know what are the main feature
 
 Results are shown in the following figures. They say that the  important aspects of this group are age, income and loyalty that explain almost half of the features of all components. The genders only explain 10% and type of offers  only 4% of them.
 
-**Fig.11** Results of PCA
+**Fig.12** Results of PCA
 ![Fig.11](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/pca.png)
 
 #### 2.2 Supervised Learning
