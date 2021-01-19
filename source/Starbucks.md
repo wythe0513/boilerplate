@@ -113,10 +113,12 @@ This figure is a comparison between the offer types originally given by Strbucks
 It looks to me that no differences are found among genders if they view offers or not.
 ![Fig.10](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/offer_view.png)
 
-**Fig 11:**  comparison among genders of offer view or not
+**Fig 11:**  comparison customers and customers with less interest in offers
 
-It looks to me that no differences are found among genders if they view offers or not.
+Customers with less interest in offers are the customers who completed less than 40% of offers received, that is lower 25% boundary of customers of at least one transaction. Those are significantly different. The number of male are much larger than females.
+
 ![Fig.11](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/offers_less_interest.png)
+
 
 
 
