@@ -3,7 +3,7 @@
 ## Introduction
 As a part of the course of [Udacity](https://www.udacity.com/), Data Science Nanodegree, I work on data sets which are kindly given by [Starbucks](https://www.starbucks.com/) for the purpose of this course. This page is a summary of my findings, if interested, code is [here](https://github.com/wythe0513/Starbucks).
 
-Data sets are based on a test marketing where 10 different types of offers were presented to total 17,000 customers. They were made in 6 batches in around 6 weeks, almost once per week. In each batch, 10 different offers were given to around 15,000 customers randomly through 4 different channels (e-mail, social networks, web and mobile ). It varies on customers how many and what kind of offers they received during this test period.
+Data sets are based on a test marketing where 10 different types of offers were presented to total 17,000 customers. They were made in 6 batches in around 6 weeks, almost once per week. In each batch, 10 different offers were given to around 12,000 customers randomly through 4 different channels (e-mail, social networks, web and mobile ). It varies on customers how many and what kind of offers they received during this test period.
 
 There are 10 kinds of offers categorized by 3 types. The discount offers are for customers who get some  rewards if  they complete the condition of those offers. BOGO(Buy One Get One) is an offer for customers to get one when they complete the condition. And the third one is just information without any benefit for customers.
 
