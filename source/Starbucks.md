@@ -53,7 +53,7 @@ Before the exploration, following data cleaning and processing were made.
 - Data Frame, `customers`(customers at least one transaction made during test period) and `no_transaction_customers`(customers with no transaction made during period) are created. In those Data Frames, personal data(age, income, gender, loyalty) and transaction data(numbers of offers received and  completed,  and also numbers of transactions made) are contained. That makes me compare those groups demographically.
 -Data Frame, `group_view`,  which is a group of customers who viewed offers, is created. And from `group_view`, Data Frame, `group_1`,  which is a group of customers who are meant to be influenced by the contes of offers, is created. Before they complete offers(meet the condition to get rewards), those costumes viewed the contents of offers. This Data Frame was used to make PCA analysis to see if any particular features are there to those who view and respond.
 - Data Frame, `group_notview`,  which is a group of customers who viewed and not_viewed , is created. This data Frame is used for Supervised Learning approach to see what are main features for classifying those two.
-- From `customers`, Data Frame`customers_lreg`,  which is a group of customers who spent above 112 or less, and who transacted above 8 times or less, is created. for Logistic Regression supervised learning analysis to see what are the main features to classify those two.
+- From `customers`, Data Frame`customers_lreg` and ``,  which is a group of customers who spent above 112 or less, and who transacted above 8 times or less, is created. for Logistic Regression supervised learning analysis to see what are the main features to classify those two.
 
 ## Exploration
 
@@ -188,7 +188,7 @@ By the best classifier chosen above, features importances are extracted as shown
 
 #### 2.3 Logistic Regression Analysis
 
-On the Data Frame, ‘customers_lreg’, supervised learning analysis by logistic regression is made. The purpose of this analysis is to find how important the kinds of offers are for customers to transact and spend money. First ‘customers_lreg’ DataFrame is created where customers classify two groups, one is for customers to spend more and transact more, and the other is the other way around. Boundary of two is 50% of distribution. 
+On the Data Frame, ‘customers_lreg’, then `data_rmf`, supervised learning analysis by logistic regression is made. The purpose of this analysis is to find how important the kinds of offers are for customers to transact and spend money. First ‘customers_lreg’ DataFrame is created where customers classify two groups, one is for customers to spend more and transact more, and the other is the other way around. Boundary of two is 50% of distribution. 
 
 The  process of data split, train and test, and analysis are the same as the above 2.2, but GridSearch and fine tuning of parameters are not made here because it seems that this process does not make a significant impact on performances on these data sets. 
 
