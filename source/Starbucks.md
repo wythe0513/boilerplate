@@ -3,7 +3,7 @@
 ## Introduction
 As a part of the course of [Udacity](https://www.udacity.com/), Data Science Nanodegree, I work on data sets which are kindly given by [Starbucks](https://www.starbucks.com/) for the purpose of this course. This page is a summary of my findings and recommendations, if interested, code is [here](https://github.com/wythe0513/Starbucks).
 
-I understand that data sets are created base on results of test marketing where 10 different types of offers were presented to total 17,000 customers. Those offers were made in 6 batches(start(0 hours), 168 hours(7days), 336 hours(14 days), 408 hours(17 days),  504 hours(21 days) and 576 hours(24 days) past since start). In each batch, 10 different offers were given to around 12,000 customers randomly through 4 different combination of several channels (e-mail, social networks, web and mobile ). It varies on customers how many and what kind of offers they received during this test period.
+I understand that data sets are created based on results of test marketing where 10 different types of offers were presented to total 17,000 customers. Those offers were made in 6 batches(start(0 hours), 168 hours(7days), 336 hours(14 days), 408 hours(17 days),  504 hours(21 days) and 576 hours(24 days) past since start). In each batch, 10 different offers were given to around 12,000 customers randomly through 4 different combinations of several channels (e-mail, social networks, web and mobile ). It varies on customers how many and what kind of offers they received during this test period.
 
 There are 10 kinds of offers categorized by 3 types. The discount offers are for customers who get some  rewards if  they complete the condition of those offers in time. BOGO(Buy One Get One) is an offer for customers to get one when they complete the condition. And the third one is just information without any benefit for customers.
 
@@ -48,16 +48,18 @@ In order to find answers of those questions, I made heuristic analysis through a
 
 Before the exploration, following data cleaning and processing were made.
 
-- Among 17000 customers, 2,885 customers group is categorized as ‘118 years old’ without  any demografic data available. This is considered a missing or unknown type of group and , without demografic data, it is meaningless to carry on exploration, therefore, I drop those customers from this exploration.
+- Among 17000 customers, 2,885 customers group is categorized as ‘118 years old’ without  any demographic data available. This is considered a missing or unknown type of group and , without demographic data, it is meaningless to carry on exploration, therefore, I drop those customers from this exploration.
 -  `loyalty` column is created in `profile` Data Frame that is a period since they become a member of Starbucks and can be considered as one of the indications of a level of their loyalty to Starbucks.
-- Data Frame, `customers`(customers at least one transaction made during test period) and `non_transaction`(customers with no transaction made during period) are created. In those Data Frames, personal data(age, income, gender, loyalty) and transaction data(numbers of offers received and  completed,  and also numbers of transactions made) are contained. That makes me compare those groups demographically.
--Data Frame, `group_view`,  which is a group of customers who viewed offers, is created. And from `group_view`, Data Frame, `group_1`,  which is a group of customers who are meant to be influenced by the contes of offers, is created. Before they complete offers(meet the condition to get rewards), those costumes viewed the contents of offers. This Data Frame was used to make PCA analysis to see if any particular features are there to those who view and respond to Starbucks's marketing approach.
-- Data Frame, `group_notview`,  which is a group of customers who viewed and not_viewed , is created. This data Frame is used for Supervised Lerning approach to see waht is main feature for customers to view or not view
-- Data Frame,  from `customers`, Data Frame`customers_lreg`,  which is a group of customers who spent above 112 or less, and who transacted above 8 times or less, is created. for Logistic Regression supervised learning analysis
+- Data Frame, `customers`(customers at least one transaction made during test period) and `no_transaction_customers`(customers with no transaction made during period) are created. In those Data Frames, personal data(age, income, gender, loyalty) and transaction data(numbers of offers received and  completed,  and also numbers of transactions made) are contained. That makes me compare those groups demographically.
+-Data Frame, `group_view`,  which is a group of customers who viewed offers, is created. And from `group_view`, Data Frame, `group_1`,  which is a group of customers who are meant to be influenced by the contes of offers, is created. Before they complete offers(meet the condition to get rewards), those costumes viewed the contents of offers. This Data Frame was used to make PCA analysis to see if any particular features are there to those who view and respond.
+- Data Frame, `group_notview`,  which is a group of customers who viewed and not_viewed , is created. This data Frame is used for Supervised Learning approach to see what are main features for classifying those two.
+- From `customers`, Data Frame`customers_lreg`,  which is a group of customers who spent above 112 or less, and who transacted above 8 times or less, is created. for Logistic Regression supervised learning analysis to see what are the main features to classify those two.
 
 ## Exploration
 
 ### 1. Heuristic approach
+
+Figures are plotted based on the Data Frame, `customers` and `no_transaction_customers`.Based on those visualized data, I explore the data to try to extract some useful facts. 
 
 #### 1.1 Customers population distribution
 
@@ -86,32 +88,32 @@ The average age of those two groups are not different.
 
 **Fig 5:**  A comparison of ratio on genders
 ![Fig.4](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/gender.png)
-The ratio of male and femal in the transaction group is not so different from ratio of all customers, while in the non-transaction group, the ration of male is much larger than female.
+The ratio of male and female in the transaction group is not so different from the ratio of all customers, while in the non-transaction group, the ratio of male is much larger than female.
 
 #### 1.3 comparison among transaction customers
 
 **Fig 6:**  Numbers of transactions and amount spent 
 ![Fig.6](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/transaction_amount.png)
-Generally speaking, the number of transactions between male and female are similar and the younger generation transacted more than the older generation, while for an average amount spent, females are much higher.
+The number of transactions for male and female are similar, and the younger generation transacted more than the older generation, while for an average amount spent, females are much higher.
 
 **Fig 7:**  The average number of offer completion and offer completion/received ratio 
 ![Fig.7](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/completion_ratio.png)
 
-Both the number of offer completion and ratio(completion out of receipt), female are higher than male. Female are more care to offers than men. This trens is consistant thout the whole generation. 
+Both the number of offer completion and ratio(completion out of receipt), female are higher than male. Female are more care to offers than men. This trend is consistent throughout the whole generation. 
 
 **Fig 8:**  Average amounts spent and average income 
 ![Fig.8](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/spent_income.png)
 
-Aberage amount spent is positively correlated to age and income.Female is higher on both of them in most part of the generation.
+Average amount spent is positively correlated to age and income.Female is higher on both of them in most part of the generation.
 
 #### 1.4 comparison among view not view
 
-**Fig 9:**  Distribution of Offer type and comparison of  completion on offer types
+**Fig 9:**  Distribution of offer type and comparison of  completion on offer types
 
 ![Fig.9](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/offer_complete.png)
 
 
-The completed offers include only ones that are made after offer viewed.i.e.  completed but do not view offers are excluded. It seems to me that the discount offers are more attractive to customers than BOGO(Buy One Get One) because completion to discount offers are a bit higher than originally distributed offers particularly for females in the older generation. Having said that, the differences are very subtle, and it is hard to say anything decisive through the heuristic analysis. I try to explore this by machine learnings later part if the offer type may impact on customers activities.
+The completed offers include only ones that are made after offer viewed.i.e.  completed but do not view offers are excluded. It seems to me that the discount offers are more attractive to customers than BOGO(Buy One Get One) because completion to discount offers are a bit higher than originally distributed offers particularly for females in the older generation. Having said that, the differences are very subtle, and it is hard to say anything decisive through the heuristic analysis. I try to explore this by machine learning later if the offer type may impact on customers activities.
 
 **Fig 10:**  comparison among genders of offer view or not
 
@@ -130,17 +132,17 @@ Customers with less interest in offers are the customers who completed less than
 #### 1.5 Summary
 
 - The customer population of male is larger than females throughout generation.
-- More populated ages are 40s-60s and younger people are less. Also, male are more populated than females. It is intersting to me, in Japan where I live, the situation is the opposite, Starbucks is popular for younger(students) and female people. It is not so popular for 50s man to have a cafe latte in Starbucks in Japan
+- More populated ages are 40s-60s and younger people are less. Also, male are more populated than females. It is interesting to me, in Japan where I live, the situation is the opposite, Starbucks is popular for younger(students) and females. It is not so popular for 50s man to have a cafe latte in Starbucks in Japan.
 - The average income level for females is larger than male generally.
 - The average amount spent for females is more than male in most ages, while the population of male is bigger than female. At the same time, numbers of offers  completed hence reward gained for females are larger than male.
 - As a particular trend, a group of the older generation(90s) of male spend significantly larger amounts that is deviated from a general trend. They are maybe very loyal customers.
 - Offers of any kind may not make a big impact on their action to buy although it is difficult to say about this from those data.
-- The customers with less interest in offers(less than 40% of offers completed to the offer received((lower 25% boundary of total customers who made transaction))  has a particular feature that is the significant larger number of male compare to that of total customers. 
+- The customers with less interest in offers(less than 40% of offers completed to the offer received((lower 25% boundary of total customers who made transaction))  have a particular feature that is the significant larger number of male compare to that of total customers. 
 - It can be said that a more favorable target with higher possibility to respond to offers are females of 30s to 50s ages with higher incomes. 
 
 ### 2. Machine Learning approach
 
-Three machine learning analysis were made in this section.
+Three machine learning analyses were made in this section.
 
 #### 2.1 Principal Component Analysis(PCA)
 
@@ -170,13 +172,14 @@ base estimator : Decision Tree Classifier(max_depth =6)
 learning rate : 0.5
 
 The result by the best classifier is as follows; 
+
 Final accuracy score on the testing data: 0.8157
 Final f-score on the testing data: 0.8716
 
 **Fig.13** 
 ![Fig.13](https://raw.githubusercontent.com/wythe0513/boilerplate/master/source/view_notview.png)
 
-By the best classifier chosen above, features importances are extracted as shown following Fig.14. The `loyalty`,` income` and `age` are almost the same, around 30% each. Those three occupy cumulatively more than 90% of features. That means that the communication channels(web, e-mail.etc.) are much less important features for customers' action for them to view or not.
+By the best classifier chosen above, features importances are extracted as shown following Fig.14. The `loyalty`,` income` and `age` are almost the same, around 30% each. Those three occupy cumulatively more than 90% of features. That means that the communication channels(web, e-mail.etc.) are much less important features for customers' actions for them to view or not.
 
 
 **Fig.14** 
@@ -185,7 +188,7 @@ By the best classifier chosen above, features importances are extracted as shown
 
 #### 2.3 Logistic Regression Analysis
 
-On the Data Frame, ‘customers_lreg’, supervised learning analysis by logistic regression is made. The purpose of this analysis is to find how important the kinds of offers are for customers to transact and spend money. First ‘customers_lreg’ DataFrame is created where customers classify two groups one is for customers to spend more and transact more, and the other is the other way around. Boundary of two is 50% of distribution. 
+On the Data Frame, ‘customers_lreg’, supervised learning analysis by logistic regression is made. The purpose of this analysis is to find how important the kinds of offers are for customers to transact and spend money. First ‘customers_lreg’ DataFrame is created where customers classify two groups, one is for customers to spend more and transact more, and the other is the other way around. Boundary of two is 50% of distribution. 
 
 The  process of data split, train and test, and analysis are the same as the above 2.2, but GridSearch and fine tuning of parameters are not made here because it seems that this process does not make a significant impact on performances on these data sets. 
 
@@ -199,8 +202,10 @@ The outcome showed in the following Fig. 15. Similar to 2.2, important features 
 - Those results also agree with the outcomes of the heuristic analysis.
 
 ## Results and Recommendations
-1. Information about demographic properties is very Important to predict customers' actions(react to offers, how much they spend etc.),  and also expect potential customers' reactions. Those are  `loyalty`( a period of length membership), level of `income`, `age` and `gender` are important.
-2. The females are more responsive to offers than male customers. Female eran amd spend than mele. And most populated generation zone is aroud 50s.
-3. Therefore, females particularly the 30s – 50s generation with higher income can be mainly targeted to approach as potential loyal customers.
-4. When making an approach, the offers presented, the discount offers seem better than BOGO, though the difference is subtle. 
+1. Information about demographic properties is very Important to predict customers' actions(react to offers, how much they spend etc.),  and also expect potential customers' reactions. Those are  `loyalty`( a period of length membership), level of `income`, `age` and `gender`.
+2. The females are more responsive to offers than male customers, and they earn and spend more than male, while the number is less than men 
+3. Females particularly the 30s – 50s generation with higher income can be mainly targeted to approach as potential loyal customers.
+4. When making approaches, the discount offers seem better than BOGO and information, though the difference is subtle. 
+5. The above views may be very different in countries and regions, at least in Japan particularly demographic information. Therefore , the same kind of test in the different countries may generate different outcomes and creative ideas.
+
 
